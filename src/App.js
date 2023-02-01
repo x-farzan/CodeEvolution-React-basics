@@ -4,15 +4,18 @@ import Welcome from "./components/Welcome";
 import Hello from "./components/Hello";
 import Message from "./components/Message";
 import Follow from "./components/Follow";
+import Counter from "./components/Counter";
 
 function App() {
   return (
     <div className="App">
+      <Counter />
+
       {/* State Management in Class Component */}
-      <Message />
+      {/* <Message /> */}
 
       {/* State management in Functional component */}
-      <Follow />
+      {/* <Follow /> */}
 
       {/* 
         props with functional component!!!!
