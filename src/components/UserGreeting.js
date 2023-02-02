@@ -60,17 +60,17 @@ export class UserGreeting extends Component {
     // return <div>{stateHolder}</div>;
 
     // 3. By ternary Operator
-    // return this.state.isLoggedIn ? (
-    //   <div>
-    //     <h1>Welcome Farzan</h1>
-    //     <button onClick={this.changeStateToLogout}>Log Out</button>
-    //   </div>
-    // ) : (
-    //   <div>
-    //     <h1>Welcome Visitor</h1>
-    //     <button onClick={this.changeStateToLogin}>Log In</button>
-    //   </div>
-    // );
+    return this.state.isLoggedIn ? (
+      <div>
+        <h1>Welcome Farzan</h1>
+        <button onClick={this.changeStateToLogout}>Log Out</button>
+      </div>
+    ) : (
+      <div>
+        <h1>Welcome Visitor</h1>
+        <button onClick={this.changeStateToLogin}>Log In</button>
+      </div>
+    );
 
     // 4. By Short circuit operator
     // return (
@@ -81,7 +81,6 @@ export class UserGreeting extends Component {
     //     </div>
     //   )
     // );
-    return;
   }
 }
 

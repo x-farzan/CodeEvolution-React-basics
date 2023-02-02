@@ -32,27 +32,27 @@ function FunctionalUserGreeting() {
   //   return <div>{stateHolder}</div>;
 
   // 2. By using ternary operator
-  //   return state ? (
-  //     <div>
-  //       <h1>Welcome Farzan</h1>
-  //       <button onClick={changeStateToLogout}>Log Out</button>
-  //     </div>
-  //   ) : (
-  //     <div>
-  //       <h1>Welcome Visitor</h1>
-  //       <button onClick={changeStateToLogin}>Log In</button>
-  //     </div>
-  //   );
+  return state ? (
+    <div>
+      <h1>Welcome Farzan</h1>
+      <button onClick={changeStateToLogout}>Log Out</button>
+    </div>
+  ) : (
+    <div>
+      <h1>Welcome Visitor</h1>
+      <button onClick={changeStateToLogin}>Log In</button>
+    </div>
+  );
 
   //3. by using short circuit
-  return (
-    state && (
-      <div>
-        <h1>Welcome Farzan</h1>
-        <button onClick={changeStateToLogout}>Log Out</button>
-      </div>
-    )
-  );
+  //   return (
+  //     state && (
+  //       <div>
+  //         <h1>Welcome Farzan</h1>
+  //         <button onClick={changeStateToLogout}>Log Out</button>
+  //       </div>
+  //     )
+  //   );
 }
 
 export default FunctionalUserGreeting;
