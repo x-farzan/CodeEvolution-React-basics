@@ -8,12 +8,21 @@ import Counter from "./components/Counter";
 import Score from "./components/Score";
 import FunctionClick from "./components/FunctionClick";
 import ClassClink from "./components/ClassClink";
+import EventBind from "./components/EventBind";
+import FunctionEventBind from "./components/FunctionEventBind";
 
 function App() {
   return (
     <div className="App">
-      <FunctionClick />
-      <ClassClink />
+      {/* Event Binding in Class component */}
+      <EventBind />
+      {/* Event Binding in Functional component */}
+      <FunctionEventBind />
+
+      {/* Events in functional Componenent */}
+      {/* <FunctionClick /> */}
+      {/* Events in class Componenent */}
+      {/* <ClassClink /> */}
 
       {/* onClick() using class component */}
       {/* <Counter /> */}
