@@ -10,14 +10,19 @@ import FunctionClick from "./components/FunctionClick";
 import ClassClink from "./components/ClassClink";
 import EventBind from "./components/EventBind";
 import FunctionEventBind from "./components/FunctionEventBind";
+import UserGreeting from "./components/UserGreeting";
+import FunctionalUserGreeting from "./components/FunctionalUserGreeting";
 
 function App() {
   return (
     <div className="App">
+      {/* <UserGreeting /> */}
+      <FunctionalUserGreeting />
+
       {/* Event Binding in Class component */}
-      <EventBind />
+      {/* <EventBind /> */}
       {/* Event Binding in Functional component */}
-      <FunctionEventBind />
+      {/* <FunctionEventBind /> */}
 
       {/* Events in functional Componenent */}
       {/* <FunctionClick /> */}
