@@ -8,10 +8,23 @@ class Counter extends Component {
     };
   }
 
+  increment() {
+    this.setState(
+      (prevState) => ({
+        counter: prevState.counter + 1,
+      }),
+      () => {
+        console.log(`Incremental value : `, this.state.counter);
+      }
+    );
+  }
+
   changeState() {
-    this.setState({
-      counter: this.state.counter + 1,
-    });
+    this.increment();
+    this.increment();
+    this.increment();
+    this.increment();
+    this.increment();
   }
 
   render() {

@@ -5,22 +5,29 @@ import Hello from "./components/Hello";
 import Message from "./components/Message";
 import Follow from "./components/Follow";
 import Counter from "./components/Counter";
+import Score from "./components/Score";
+import FunctionClick from "./components/FunctionClick";
+import ClassClink from "./components/ClassClink";
 
 function App() {
   return (
     <div className="App">
-      <Counter />
+      <FunctionClick />
+      <ClassClink />
+
+      {/* onClick() using class component */}
+      {/* <Counter /> */}
+      {/* onClick() using functional component */}
+      {/* <Score /> */}
 
       {/* State Management in Class Component */}
       {/* <Message /> */}
-
       {/* State management in Functional component */}
       {/* <Follow /> */}
 
       {/* 
         props with functional component!!!!
        */}
-
       {/* <Greet name="Bruce" superHero="Batman">
         <p>
           Description : Bruce is a super hero of Gotham city who fights against
@@ -37,7 +44,6 @@ function App() {
       {/* 
         props with class component!!!!
        */}
-
       {/* <Welcome name="Bruce" superHero="Batman">
         <p>
           Description : Bruce is a super hero of Gotham city who fights against
