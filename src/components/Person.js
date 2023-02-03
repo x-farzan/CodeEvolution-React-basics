@@ -1,7 +1,6 @@
 import React from "react";
 
 function Person({ person }) {
-  console.log("Person in Person component >>>>>> ", person);
   return (
     <div>
       <h1>
