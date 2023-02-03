@@ -15,12 +15,12 @@ import FunctionalUserGreeting from "./components/FunctionalUserGreeting";
 import ParentComponent from "./components/ParentComponent";
 import childComponent from "./components/ChildComponent";
 import FunctionalParentComponent from "./components/FunctionalParentComponent";
+import PersonList from "./components/PersonList";
 
 function App() {
   return (
     <div className="App">
-
-      
+      <PersonList />
 
       {/* Methods as props */}
       {/* <ParentComponent />
