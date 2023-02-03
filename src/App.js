@@ -12,12 +12,22 @@ import EventBind from "./components/EventBind";
 import FunctionEventBind from "./components/FunctionEventBind";
 import UserGreeting from "./components/UserGreeting";
 import FunctionalUserGreeting from "./components/FunctionalUserGreeting";
+import ParentComponent from "./components/ParentComponent";
+import childComponent from "./components/ChildComponent";
+import FunctionalParentComponent from "./components/FunctionalParentComponent";
 
 function App() {
   return (
     <div className="App">
+
+      
+
+      {/* Methods as props */}
+      {/* <ParentComponent />
+      <FunctionalParentComponent /> */}
+
       {/* <UserGreeting /> */}
-      <FunctionalUserGreeting />
+      {/* <FunctionalUserGreeting /> */}
 
       {/* Event Binding in Class component */}
       {/* <EventBind /> */}
