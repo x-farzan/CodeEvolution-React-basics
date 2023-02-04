@@ -16,11 +16,19 @@ import ParentComponent from "./components/ParentComponent";
 import childComponent from "./components/ChildComponent";
 import FunctionalParentComponent from "./components/FunctionalParentComponent";
 import PersonList from "./components/PersonList";
+import StyleSheet from "./components/StyleSheet";
+import Inline from "./components/Inline";
+import classes from "./components/appStyle.module.css";
 
 function App() {
   return (
     <div className="App">
-      <PersonList />
+      <StyleSheet primary={true} />
+      <Inline />
+      <h1 className={classes.success}>Success</h1>
+
+      {/* List rendering with key prop */}
+      {/* <PersonList /> */}
 
       {/* Methods as props */}
       {/* <ParentComponent />
