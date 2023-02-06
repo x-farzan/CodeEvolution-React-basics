@@ -19,13 +19,17 @@ import PersonList from "./components/PersonList";
 import StyleSheet from "./components/StyleSheet";
 import Inline from "./components/Inline";
 import classes from "./components/appStyle.module.css";
+import Form from "./components/Form";
 
 function App() {
   return (
     <div className="App">
-      <StyleSheet primary={true} />
+      <Form />
+
+      {/* CSS Styling ways */}
+      {/* <StyleSheet primary={true} />
       <Inline />
-      <h1 className={classes.success}>Success</h1>
+      <h1 className={classes.success}>Success</h1> */}
 
       {/* List rendering with key prop */}
       {/* <PersonList /> */}
