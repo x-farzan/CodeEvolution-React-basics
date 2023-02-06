@@ -20,11 +20,16 @@ import StyleSheet from "./components/StyleSheet";
 import Inline from "./components/Inline";
 import classes from "./components/appStyle.module.css";
 import Form from "./components/Form";
+import LifeCycleA from "./components/LifeCycleA";
 
 function App() {
   return (
     <div className="App">
-      <Form />
+
+      <LifeCycleA />
+
+      {/* Form handling */}
+      {/* <Form /> */}
 
       {/* CSS Styling ways */}
       {/* <StyleSheet primary={true} />
