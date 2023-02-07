@@ -1,5 +1,19 @@
 import React, { Component } from "react";
 
+/**
+ * Lifecyle steps
+ * 1. Upon Initial render
+ *    a. constructor()
+ *    b. getDerivedStateFromProps()
+ *
+ * 2. Upon clicking button for state change
+ *    a. getDerivedStateFromProps()
+ *    b. shouldComponentUpdate()
+ *    c. render()
+ *    d. getSnapshotBeforeUpdate()
+ *    e. componentDidUpdate()
+ */
+
 class UpdateLifeCycle extends Component {
   constructor(props) {
     super(props);
@@ -30,9 +44,13 @@ class UpdateLifeCycle extends Component {
 
   changeState = () => {
     console.log(`LifeCycleA changeState`);
+    this.setState({
+      name: "Uzair",
+    });
   };
 
   render() {
+    console.log(`Render`);
     return (
       <div>
         <div>

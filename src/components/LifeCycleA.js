@@ -1,6 +1,13 @@
 import React, { Component } from "react";
 import LifeCycleB from "./LifeCycleB";
 
+/**
+ * Lifecyle steps
+ * a. constructor()
+ * b. getDerivedStateFromProps()
+ * c. render()
+ * d. componentDidMount()
+ */
 class LifeCycleA extends Component {
   constructor(props) {
     super(props);

@@ -22,11 +22,14 @@ import classes from "./components/appStyle.module.css";
 import Form from "./components/Form";
 import LifeCycleA from "./components/LifeCycleA";
 import UpdateLifeCycle from "./components/UpdateLifeCycle";
+import Table from "./components/Table";
 
 function App() {
   return (
     <div className="App">
-      <UpdateLifeCycle />
+      <Table />
+
+      {/* <UpdateLifeCycle /> */}
 
       {/* Mounting life cycle */}
       {/* <LifeCycleA /> */}
