@@ -21,12 +21,15 @@ import Inline from "./components/Inline";
 import classes from "./components/appStyle.module.css";
 import Form from "./components/Form";
 import LifeCycleA from "./components/LifeCycleA";
+import UpdateLifeCycle from "./components/UpdateLifeCycle";
 
 function App() {
   return (
     <div className="App">
+      <UpdateLifeCycle />
 
-      <LifeCycleA />
+      {/* Mounting life cycle */}
+      {/* <LifeCycleA /> */}
 
       {/* Form handling */}
       {/* <Form /> */}
