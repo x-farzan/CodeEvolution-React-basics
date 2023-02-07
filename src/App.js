@@ -28,6 +28,8 @@ import PParentComponent from "./components/PParentComponent";
 function App() {
   return (
     <div className="App">
+      <PParentComponent />
+
       {/* Regular vs Pure Component */}
       {/* <PParentComponent /> */}
 
