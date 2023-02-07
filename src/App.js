@@ -23,11 +23,16 @@ import Form from "./components/Form";
 import LifeCycleA from "./components/LifeCycleA";
 import UpdateLifeCycle from "./components/UpdateLifeCycle";
 import Table from "./components/Table";
+import PParentComponent from "./components/PParentComponent";
 
 function App() {
   return (
     <div className="App">
-      <Table />
+      {/* Regular vs Pure Component */}
+      {/* <PParentComponent /> */}
+
+      {/* React fragments */}
+      {/* <Table /> */}
 
       {/* <UpdateLifeCycle /> */}
 
