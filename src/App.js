@@ -25,11 +25,14 @@ import UpdateLifeCycle from "./components/UpdateLifeCycle";
 import Table from "./components/Table";
 import PParentComponent from "./components/PParentComponent";
 import RefDemo from "./components/RefDemo";
+import FocusParent from "./components/FocusParent";
 
 function App() {
   return (
     <div className="App">
-      <RefDemo />
+      <FocusParent />
+
+      {/* <RefDemo /> */}
 
       {/* Pure component in class functionality using memo in functional component */}
       {/* <PParentComponent /> */}
