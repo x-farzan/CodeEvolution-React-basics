@@ -26,11 +26,15 @@ import Table from "./components/Table";
 import PParentComponent from "./components/PParentComponent";
 import RefDemo from "./components/RefDemo";
 import FocusParent from "./components/FocusParent";
+import PortalDemo from "./components/PortalDemo";
 
 function App() {
   return (
     <div className="App">
-      <FocusParent />
+      <PortalDemo />
+
+      {/* Call refs in child from parent */}
+      {/* <FocusParent /> */}
 
       {/* <RefDemo /> */}
 
