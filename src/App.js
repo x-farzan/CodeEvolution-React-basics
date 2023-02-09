@@ -29,11 +29,20 @@ import FocusParent from "./components/FocusParent";
 import PortalDemo from "./components/PortalDemo";
 import Hero from "./components/Hero";
 import ErrorBoundary from "./components/ErrorBoundary";
+import ClickCounter from "./components/ClickCounter";
+import HoverCounter from "./components/HoverCounter";
 
 function App() {
   return (
     <div className="App">
-      <ErrorBoundary>
+
+
+
+      <ClickCounter name="Farzan"/>
+      <HoverCounter />
+
+      {/* Catch */}
+      {/* <ErrorBoundary>
         <Hero name="Superman" />
       </ErrorBoundary>
       <ErrorBoundary>
@@ -41,7 +50,7 @@ function App() {
       </ErrorBoundary>
       <ErrorBoundary>
         <Hero name="Joker" />
-      </ErrorBoundary>
+      </ErrorBoundary> */}
 
       {/* Implemented portal to render outside the main DOM */}
       {/* <PortalDemo /> */}
