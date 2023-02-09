@@ -27,11 +27,24 @@ import PParentComponent from "./components/PParentComponent";
 import RefDemo from "./components/RefDemo";
 import FocusParent from "./components/FocusParent";
 import PortalDemo from "./components/PortalDemo";
+import Hero from "./components/Hero";
+import ErrorBoundary from "./components/ErrorBoundary";
 
 function App() {
   return (
     <div className="App">
-      <PortalDemo />
+      <ErrorBoundary>
+        <Hero name="Superman" />
+      </ErrorBoundary>
+      <ErrorBoundary>
+        <Hero name="Batman" />
+      </ErrorBoundary>
+      <ErrorBoundary>
+        <Hero name="Joker" />
+      </ErrorBoundary>
+
+      {/* Implemented portal to render outside the main DOM */}
+      {/* <PortalDemo /> */}
 
       {/* Call refs in child from parent */}
       {/* <FocusParent /> */}
