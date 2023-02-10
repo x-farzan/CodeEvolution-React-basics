@@ -29,11 +29,33 @@ import FocusParent from "./components/FocusParent";
 import PortalDemo from "./components/PortalDemo";
 import Hero from "./components/Hero";
 import ErrorBoundary from "./components/ErrorBoundary";
+import ClickCounter from "./components/ClickCounter";
+import HoverCounter from "./components/HoverCounter";
+import ClickCounterTwo from "./components/ClickCounterTwo";
+import HoverCounterTwo from "./components/HoverCounterTwo";
+import User from "./components/ParentCounter";
+import ParentCounter from "./components/ParentCounter";
 
 function App() {
   return (
     <div className="App">
-      {/* Catching errors  */}
+      {/* Render prop */}
+      <ParentCounter
+        render={(count, incrementCounter) => (
+          <ClickCounterTwo count={count} incrementCounter={incrementCounter} />
+        )}
+      />
+      <ParentCounter
+        render={(count, incrementCounter) => (
+          <HoverCounterTwo count={count} incrementCounter={incrementCounter} />
+        )}
+      />
+
+      {/* Higher Order Component */}
+      {/* <ClickCounter name="Farzan" />
+      <HoverCounter /> */}
+
+      {/* Catching Errors */}
       {/* <ErrorBoundary>
         <Hero name="Superman" />
       </ErrorBoundary>
