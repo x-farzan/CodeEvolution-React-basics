@@ -1,5 +1,10 @@
 import React, { Component } from "react";
 
+// Error Boundary enables us to catch errors on runtime.
+// Benefit?
+//      - Enables us to avoid app crash on error occurence.
+//      - Enables us to set fallback ui on error
+
 class ErrorBoundary extends Component {
   constructor(props) {
     super(props);
@@ -12,7 +17,7 @@ class ErrorBoundary extends Component {
     //   hasError: true,
     // });
     return { hasError: true };
-  }
+  };
 
   componentDidCatch(error, errorInfo) {
     // You can also log the error to an error reporting service

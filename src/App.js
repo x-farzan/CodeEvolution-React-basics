@@ -33,7 +33,8 @@ import ErrorBoundary from "./components/ErrorBoundary";
 function App() {
   return (
     <div className="App">
-      <ErrorBoundary>
+      {/* Catching errors  */}
+      {/* <ErrorBoundary>
         <Hero name="Superman" />
       </ErrorBoundary>
       <ErrorBoundary>
@@ -41,7 +42,7 @@ function App() {
       </ErrorBoundary>
       <ErrorBoundary>
         <Hero name="Joker" />
-      </ErrorBoundary>
+      </ErrorBoundary> */}
 
       {/* Implemented portal to render outside the main DOM */}
       {/* <PortalDemo /> */}
