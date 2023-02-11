@@ -37,13 +37,20 @@ import User from "./components/ParentCounter";
 import ParentCounter from "./components/ParentCounter";
 import ComponentC from "./components/ComponentC";
 import { UserProvider } from "./components/userContext";
+import AxiosGet from "./components/AxiosGet";
+import PostForm from "./components/PostForm";
 
 function App() {
   return (
     <div className="App">
-      <UserProvider value="Farzan">
+
+      {/* Axios calls */}
+      {/* <PostForm /> */}
+      {/* <AxiosGet /> */}
+
+      {/* <UserProvider value="Farzan">
         <ComponentC />
-      </UserProvider>
+      </UserProvider> */}
 
       {/* Render prop */}
       {/* <ParentCounter
