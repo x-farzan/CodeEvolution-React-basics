@@ -39,10 +39,12 @@ import ComponentC from "./components/ComponentC";
 import { UserProvider } from "./components/userContext";
 import AxiosGet from "./components/AxiosGet";
 import PostForm from "./components/PostForm";
+import HooksUseState from "./components/HooksUseState";
 
 function App() {
   return (
     <div className="App">
+      <HooksUseState />
 
       {/* Axios calls */}
       {/* <PostForm /> */}
