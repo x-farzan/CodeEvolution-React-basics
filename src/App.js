@@ -45,11 +45,19 @@ import HookCounterWithUseEffect from "./components/HookCounterWithUseEffect";
 import MouseHook from "./components/MouseHook";
 import MouseContainer from "./components/MouseContainer";
 import AxiosWithUseEffect from "./components/AxiosWithUseEffect";
+import ComponentX from "./components/ComponentX";
+import React, { useContext } from "react";
+
+export const UserContext = React.createContext();
 
 function App() {
   return (
     <div className="App">
-      <AxiosWithUseEffect />
+      <UserContext.Provider value={{ name: "Farzan" }}>
+        <ComponentX />
+      </UserContext.Provider>
+
+      {/* <AxiosWithUseEffect /> */}
 
       {/* componentWillUnmout() functionality using useEffect() */}
       {/* <MouseContainer /> */}
