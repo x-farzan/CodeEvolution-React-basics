@@ -42,11 +42,20 @@ import PostForm from "./components/PostForm";
 import HooksUseState from "./components/HooksUseState";
 import HooksUseStateWithObj from "./components/HooksUseStateWithObj";
 import HookCounterWithUseEffect from "./components/HookCounterWithUseEffect";
+import MouseHook from "./components/MouseHook";
+import MouseContainer from "./components/MouseContainer";
 
 function App() {
   return (
     <div className="App">
-      <HookCounterWithUseEffect />
+      {/* componentWillUnmout() functionality using useEffect() */}
+      <MouseContainer />
+
+      {/* UseEffect single call */}
+      {/* <MouseHook /> */}
+
+      {/* UseEffect implementation, rendering on state change */}
+      {/* <HookCounterWithUseEffect /> */}
 
       {/* Use state hook */}
       {/* <HooksUseStateWithObj /> */}
