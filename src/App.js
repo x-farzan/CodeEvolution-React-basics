@@ -44,12 +44,15 @@ import HooksUseStateWithObj from "./components/HooksUseStateWithObj";
 import HookCounterWithUseEffect from "./components/HookCounterWithUseEffect";
 import MouseHook from "./components/MouseHook";
 import MouseContainer from "./components/MouseContainer";
+import AxiosWithUseEffect from "./components/AxiosWithUseEffect";
 
 function App() {
   return (
     <div className="App">
+      <AxiosWithUseEffect />
+
       {/* componentWillUnmout() functionality using useEffect() */}
-      <MouseContainer />
+      {/* <MouseContainer /> */}
 
       {/* UseEffect single call */}
       {/* <MouseHook /> */}
