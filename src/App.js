@@ -48,14 +48,16 @@ import AxiosWithUseEffect from "./components/AxiosWithUseEffect";
 import ComponentX from "./components/ComponentX";
 import React, { useContext } from "react";
 import UseReducer from "./components/UseReducer";
+import MultipleUseReducers from "./components/MultipleUseReducers";
 
 export const UserContext = React.createContext();
 
 function App() {
   return (
     <div className="App">
-
-      <UseReducer />
+      {/* UseReducer() and MultipleUseReducers with same reducer function */}
+      {/* <UseReducer /> */}
+      <MultipleUseReducers />
 
       {/* <UserContext.Provider value={{ name: "Farzan" }}>
         <ComponentX />
