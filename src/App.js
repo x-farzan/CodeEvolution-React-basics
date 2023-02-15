@@ -47,15 +47,19 @@ import MouseContainer from "./components/MouseContainer";
 import AxiosWithUseEffect from "./components/AxiosWithUseEffect";
 import ComponentX from "./components/ComponentX";
 import React, { useContext } from "react";
+import UseReducer from "./components/UseReducer";
 
 export const UserContext = React.createContext();
 
 function App() {
   return (
     <div className="App">
-      <UserContext.Provider value={{ name: "Farzan" }}>
+
+      <UseReducer />
+
+      {/* <UserContext.Provider value={{ name: "Farzan" }}>
         <ComponentX />
-      </UserContext.Provider>
+      </UserContext.Provider> */}
 
       {/* <AxiosWithUseEffect /> */}
 
