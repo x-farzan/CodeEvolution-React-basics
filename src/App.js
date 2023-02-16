@@ -46,45 +46,64 @@ import MouseHook from "./components/MouseHook";
 import MouseContainer from "./components/MouseContainer";
 import AxiosWithUseEffect from "./components/AxiosWithUseEffect";
 import ComponentX from "./components/ComponentX";
-import React, { useContext } from "react";
+import React, { useContext, useReducer } from "react";
 import UseReducer from "./components/UseReducer";
 import MultipleUseReducers from "./components/MultipleUseReducers";
+import ComponentAA from "./components/ComponentAA";
+import ComponentBB from "./components/ComponentBB";
+import ComponentCC from "./components/ComponentCC";
 
 export const UserContext = React.createContext();
 
+export const CounterContext = React.createContext();
+
+const initialState = 0;
+const reducer = (state, action) => {
+  switch (action) {
+    case "increment":
+      return state + 1;
+    case "decrement":
+      return state - 1;
+    case "reset":
+      return initialState;
+    default:
+      return state;
+  }
+};
+
 function App() {
+  const [count, dispatch] = useReducer(reducer, initialState);
   return (
     <div className="App">
+      Count - {count}
+      <CounterContext.Provider
+        value={{ counterState: count, counterDispatch: dispatch }}
+      >
+        <ComponentAA />
+        <ComponentBB />
+        <ComponentCC />
+      </CounterContext.Provider>
       {/* UseReducer() and MultipleUseReducers with same reducer function */}
       {/* <UseReducer /> */}
-      <MultipleUseReducers />
-
+      {/* <MultipleUseReducers /> */}
       {/* <UserContext.Provider value={{ name: "Farzan" }}>
         <ComponentX />
       </UserContext.Provider> */}
-
       {/* <AxiosWithUseEffect /> */}
-
       {/* componentWillUnmout() functionality using useEffect() */}
       {/* <MouseContainer /> */}
-
       {/* UseEffect single call */}
       {/* <MouseHook /> */}
-
       {/* UseEffect implementation, rendering on state change */}
       {/* <HookCounterWithUseEffect /> */}
-
       {/* Use state hook */}
       {/* <HooksUseStateWithObj /> */}
-
       {/* Axios calls */}
       {/* <PostForm /> */}
       {/* <AxiosGet /> */}
-
       {/* <UserProvider value="Farzan">
         <ComponentC />
       </UserProvider> */}
-
       {/* Render prop */}
       {/* <ParentCounter
         render={(count, incrementCounter) => (
@@ -96,11 +115,9 @@ function App() {
           <HoverCounterTwo count={count} incrementCounter={incrementCounter} />
         )}
       /> */}
-
       {/* Higher Order Component */}
       {/* <ClickCounter name="Farzan" />
       <HoverCounter /> */}
-
       {/* Catching Errors */}
       {/* <ErrorBoundary>
         <Hero name="Superman" />
@@ -111,67 +128,49 @@ function App() {
       <ErrorBoundary>
         <Hero name="Joker" />
       </ErrorBoundary> */}
-
       {/* Implemented portal to render outside the main DOM */}
       {/* <PortalDemo /> */}
-
       {/* Call refs in child from parent */}
       {/* <FocusParent /> */}
-
       {/* <RefDemo /> */}
-
       {/* Pure component in class functionality using memo in functional component */}
       {/* <PParentComponent /> */}
-
       {/* Regular vs Pure Component */}
       {/* <PParentComponent /> */}
-
       {/* React fragments */}
       {/* <Table /> */}
-
       {/* <UpdateLifeCycle /> */}
-
       {/* Mounting life cycle */}
       {/* <LifeCycleA /> */}
-
       {/* Form handling */}
       {/* <Form /> */}
-
       {/* CSS Styling ways */}
       {/* <StyleSheet primary={true} />
       <Inline />
       <h1 className={classes.success}>Success</h1> */}
-
       {/* List rendering with key prop */}
       {/* <PersonList /> */}
-
       {/* Methods as props */}
       {/* <ParentComponent />
       <FunctionalParentComponent /> */}
-
       {/* <UserGreeting /> */}
       {/* <FunctionalUserGreeting /> */}
-
       {/* Event Binding in Class component */}
       {/* <EventBind /> */}
       {/* Event Binding in Functional component */}
       {/* <FunctionEventBind /> */}
-
       {/* Events in functional Componenent */}
       {/* <FunctionClick /> */}
       {/* Events in class Componenent */}
       {/* <ClassClink /> */}
-
       {/* onClick() using class component */}
       {/* <Counter /> */}
       {/* onClick() using functional component */}
       {/* <Score /> */}
-
       {/* State Management in Class Component */}
       {/* <Message /> */}
       {/* State management in Functional component */}
       {/* <Follow /> */}
-
       {/* 
         props with functional component!!!!
        */}
@@ -187,7 +186,6 @@ function App() {
       <Greet name="Diana" superHero="Wonder woman" />
       <br />
       <br /> */}
-
       {/* 
         props with class component!!!!
        */}
