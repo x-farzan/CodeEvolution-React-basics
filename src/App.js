@@ -52,6 +52,7 @@ import MultipleUseReducers from "./components/MultipleUseReducers";
 import ComponentAA from "./components/ComponentAA";
 import ComponentBB from "./components/ComponentBB";
 import ComponentCC from "./components/ComponentCC";
+import DataFetchTwo from "./components/DataFetchTwo";
 
 export const UserContext = React.createContext();
 
@@ -75,14 +76,18 @@ function App() {
   const [count, dispatch] = useReducer(reducer, initialState);
   return (
     <div className="App">
-      Count - {count}
+      <DataFetchTwo />
+
+      {/* useReducer() with useContext() */}
+      {/* Count - {count}
       <CounterContext.Provider
         value={{ counterState: count, counterDispatch: dispatch }}
       >
         <ComponentAA />
         <ComponentBB />
         <ComponentCC />
-      </CounterContext.Provider>
+      </CounterContext.Provider> */}
+
       {/* UseReducer() and MultipleUseReducers with same reducer function */}
       {/* <UseReducer /> */}
       {/* <MultipleUseReducers /> */}
