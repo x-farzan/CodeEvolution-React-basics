@@ -53,6 +53,7 @@ import ComponentAA from "./components/ComponentAA";
 import ComponentBB from "./components/ComponentBB";
 import ComponentCC from "./components/ComponentCC";
 import DataFetchTwo from "./components/DataFetchTwo";
+import ParentComponentTwo from "./components/ParentComponentTwo";
 
 export const UserContext = React.createContext();
 
@@ -76,7 +77,11 @@ function App() {
   const [count, dispatch] = useReducer(reducer, initialState);
   return (
     <div className="App">
-      <DataFetchTwo />
+      {/* Rendering components that really needs to update using memo, and useCallback */}
+      <ParentComponentTwo />
+
+      {/* Data fetching using useReducer() */}
+      {/* <DataFetchTwo /> */}
 
       {/* useReducer() with useContext() */}
       {/* Count - {count}
