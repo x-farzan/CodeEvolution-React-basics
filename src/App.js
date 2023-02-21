@@ -55,6 +55,7 @@ import ComponentCC from "./components/ComponentCC";
 import DataFetchTwo from "./components/DataFetchTwo";
 import ParentComponentTwo from "./components/ParentComponentTwo";
 import Counters from "./components/Counters";
+import FocusInput from "./components/FocusInput";
 
 export const UserContext = React.createContext();
 
@@ -78,8 +79,10 @@ function App() {
   const [count, dispatch] = useReducer(reducer, initialState);
   return (
     <div className="App">
+      <FocusInput />
+
       {/* useMemo() hook */}
-      <Counters />
+      {/* <Counters /> */}
 
       {/* Rendering components that really needs to update using memo, and useCallback */}
       {/* <ParentComponentTwo /> */}
@@ -103,6 +106,7 @@ function App() {
       {/* <UserContext.Provider value={{ name: "Farzan" }}>
         <ComponentX />
       </UserContext.Provider> */}
+      
       {/* <AxiosWithUseEffect /> */}
       {/* componentWillUnmout() functionality using useEffect() */}
       {/* <MouseContainer /> */}
